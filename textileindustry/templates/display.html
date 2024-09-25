@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stored Tasks</title>
+    <link rel="stylesheet"  href="static/display.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stored Tasks</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Task ID</th>
+                    <th>Machine ID</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                <tr>
+                    <td>{{ task['taskId'] }}</td>
+                    <td>{{ task['machineId'] }}</td>
+                    <td>{{ task['duration'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

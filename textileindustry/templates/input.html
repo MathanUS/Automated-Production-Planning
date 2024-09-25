@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Inputs</title>
+    <link rel="stylesheet" href="/static/input.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Task Inputs</h1>
+        <form id="taskForm", action="{{url_for('add_task')}}", method="POST">
+            <div class="input-group">
+                <label for="taskId">Task ID:</label>
+                <input type="number" id="taskId" name="taskId" >
+            </div>
+            <div class="input-group">
+                <label for="machineId">Machine ID:</label>
+                <input type="number" id="machineId" name="machineId" >
+            </div>
+            <div class="input-group">
+                <label for="duration">Duration:</label>
+                <input type="number" id="duration" name="duration" >
+            </div>
+            <button type="submit">Add Task</button>
+            <a href="{{url_for('output')}}"><button type="button">Output</button></a>
+    <a href="{{url_for('display')}}"><button type="button">Display</button></a>
+    
+        </form>
+    </div>
+
+
+</body>
+</html>

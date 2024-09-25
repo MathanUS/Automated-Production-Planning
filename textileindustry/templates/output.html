@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Output</title>
+    <link rel="stylesheet" href="/static/output.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Output</h1>
+        <div class="output-data">
+            <ul>
+                {% set index = 0 %}
+                {% for item in output %}
+                    {% if index == 0 %}
+                        <li>BEST MAKESPAN FOR THE TASKS: {{ item }}</li>
+                    {% elif index == 1 %}
+                        <li>BEST SEQUENCE OF TASKS WITH THEIR TASK ID: {{ item }}</li>
+                    {% else %}
+                        <li>Default text for other items: {{ item }}</li>
+                    {% endif %}
+                    {% set index = index + 1 %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
